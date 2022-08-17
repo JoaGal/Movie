@@ -4,8 +4,6 @@ import { API_KEY, API_URL, POSTER_URL } from "../../service/api";
 import { useFetch } from "../../Hooks/useFetch";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import YouTube from "react-youtube";
-import axios from "axios";
 
 export const Home = () => {
   const { nowPlaying } = useFetch();

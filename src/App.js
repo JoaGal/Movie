@@ -59,9 +59,7 @@ export const App = () => {
     SelectUser()
   }, [])
 
-  useEffect(() => {
-    SelectUser()
-  }, [select])
+  
   
   useEffect(() => {
     fetchMovies();
@@ -91,6 +89,7 @@ export const App = () => {
         page,
         totalPage,
         select,
+        SelectUser
 
       }}
     >
