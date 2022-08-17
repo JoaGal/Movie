@@ -11,12 +11,7 @@ export const Login = () => {
     const password = useRef('');
     const [error, setError] = useState();
     const [subscribe, setSubscribe] = useState();
-    const { select, setSelect, SelectUser} = useContext(AppContext);
-
-    useEffect(() => {
-      SelectUser()
-    }, [select])
-    
+    const { select } = useContext(AppContext);
 
 
     const handleSubmit = (e) => {

@@ -18,7 +18,7 @@ export const App = () => {
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState();
   const searchMovie = useRef('');
-  const [select, setSelect] = useState(<IoIosAdd className='user-ico'/>)
+  const [select, setSelect] = useState(<IoIosAdd className='user-ico' />)
 
   const fetchMovies = useCallback(
     async (searchMovie) => {
@@ -42,23 +42,27 @@ export const App = () => {
   );
 
   const SelectUser = () => {
-    if ( window.localStorage.getItem('User', 'Queen') === 'Queen' ) {
-        setSelect(<GiChessQueen className='user-ico'/>)
-    } else if ( window.localStorage.getItem('User', 'Rook') === 'Rook') {
-        setSelect(<GiChessRook className='user-ico'/>)
+    if (window.localStorage.getItem('User', 'Queen') === 'Queen') {
+      setSelect(<GiChessQueen className='user-ico' />)
+    } else if (window.localStorage.getItem('User', 'Rook') === 'Rook') {
+      setSelect(<GiChessRook className='user-ico' />)
     } else if (window.localStorage.getItem('User', 'Knight') === 'Knight') {
-        setSelect(<GiChessKnight className='user-ico'/>)
-    } else if ( window.localStorage.getItem('User', 'King') === 'King') {
-        setSelect(<GiChessKing className='user-ico'/>)
-    } else if ( window.localStorage.getItem('User', 'Pawn') === 'Pawn') {
-        setSelect(<GiChessPawn className='user-ico'/>)
+      setSelect(<GiChessKnight className='user-ico' />)
+    } else if (window.localStorage.getItem('User', 'King') === 'King') {
+      setSelect(<GiChessKing className='user-ico' />)
+    } else if (window.localStorage.getItem('User', 'Pawn') === 'Pawn') {
+      setSelect(<GiChessPawn className='user-ico' />)
     }
-}
+  }
 
-useEffect(() => {
-  SelectUser()
-}, [])
+  useEffect(() => {
+    SelectUser()
+  }, [])
 
+  useEffect(() => {
+    SelectUser()
+  }, [select])
+  
   useEffect(() => {
     fetchMovies();
   }, [fetchMovies]);
@@ -86,9 +90,7 @@ useEffect(() => {
         nextPage,
         page,
         totalPage,
-        select, 
-        setSelect,
-        SelectUser,
+        select,
 
       }}
     >
