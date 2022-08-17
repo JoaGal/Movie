@@ -87,7 +87,8 @@ useEffect(() => {
         page,
         totalPage,
         select, 
-        setSelect
+        setSelect,
+        SelectUser,
 
       }}
     >

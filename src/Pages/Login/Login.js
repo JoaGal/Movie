@@ -11,21 +11,7 @@ export const Login = () => {
     const password = useRef('');
     const [error, setError] = useState();
     const [subscribe, setSubscribe] = useState();
-    const { select, setSelect } = useContext(AppContext);
-
-    const SelectUser = () => {
-        if ( window.localStorage.getItem('User', 'Queen') === 'Queen' ) {
-            setSelect(<GiChessQueen className='user-ico'/>)
-        } else if ( window.localStorage.getItem('User', 'Rook') === 'Rook') {
-            setSelect(<GiChessRook className='user-ico'/>)
-        } else if (window.localStorage.getItem('User', 'Knight') === 'Knight') {
-            setSelect(<GiChessKnight className='user-ico'/>)
-        } else if ( window.localStorage.getItem('User', 'King') === 'King') {
-            setSelect(<GiChessKing className='user-ico'/>)
-        } else if ( window.localStorage.getItem('User', 'Pawn') === 'Pawn') {
-            setSelect(<GiChessPawn className='user-ico'/>)
-        }
-    }
+    const { select, setSelect, SelectUser} = useContext(AppContext);
 
     useEffect(() => {
       SelectUser()
@@ -50,6 +36,18 @@ export const Login = () => {
             setError('Thanks for subscribing');
             setSubscribe(true);
             window.localStorage.setItem('isLogin', true);
+            
+            if ( window.localStorage.getItem('User', 'Queen') === 'Queen' ) {
+                setSelect(<GiChessQueen className='user-ico'/>)
+            } else if ( window.localStorage.getItem('User', 'Rook') === 'Rook') {
+                setSelect(<GiChessRook className='user-ico'/>)
+            } else if (window.localStorage.getItem('User', 'Knight') === 'Knight') {
+                setSelect(<GiChessKnight className='user-ico'/>)
+            } else if ( window.localStorage.getItem('User', 'King') === 'King') {
+                setSelect(<GiChessKing className='user-ico'/>)
+            } else if ( window.localStorage.getItem('User', 'Pawn') === 'Pawn') {
+                setSelect(<GiChessPawn className='user-ico'/>)
+            }
 
         }
     }
