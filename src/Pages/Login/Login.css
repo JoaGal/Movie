@@ -1,0 +1,106 @@
+.login-container {
+    background-color: #111111;
+    width: 927px;
+    height: 647px;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 5px 5px 1px 4px #000000;
+}
+
+.titel-container {
+    color: #f1b204;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+
+.login-p {
+    text-align: left;
+    padding-left: 9%;
+    font-size: 21px;
+    color: #f1b204;
+    padding-top: 25px;
+}
+
+.login-input {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    width: 82.5%;
+    height: 58px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+}
+
+.login-input:focus {
+    box-shadow: 0px 0px 3px 4px #f1b204;
+}
+
+.button-login {
+    width: 82.5%;
+    height: 73px;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 45px;
+    font-weight: bold;
+}
+.user-img{
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid #f1b204;
+    color: #f1b204;
+    display: inline-block;
+}
+
+.user-ico{
+    width: 30px;
+    height: 30px;
+    color: #f1b204;
+    display: block;
+}
+
+.user-ico2{
+    width: 30px;
+    height: 30px;
+    color: #f1b204;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.p-error {
+    font-size: 21px;
+    color: rgb(202, 44, 5);
+}
+
+.p-access{
+    font-size: 21px;
+    color: #03c703;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .login-container {
+        width: 75%;
+        margin-top: 20px;
+    }
+
+    .titel-container {
+        font-size: 25px;
+        padding-top: 40px;
+    }
+}

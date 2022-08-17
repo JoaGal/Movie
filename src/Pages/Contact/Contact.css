@@ -1,0 +1,58 @@
+.p-contact {
+    color: #ffffff;
+    margin: 64px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+}
+
+.title-contact {
+    color: #f1b204;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.container-card-contact {
+    text-align: center;
+}
+
+.card-contact {
+    border: 4px solid #f1b204;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: -20px;
+}
+
+.img-contact {
+    width: 130px;
+    display: block;
+    height: 130px;
+    margin: auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .p-contact {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .title-contact {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .card-contact {
+        border: 3px solid #f1b204;
+    }
+
+    .img-contact {
+        width: 100px;
+        height: 100px;
+    }
+}
