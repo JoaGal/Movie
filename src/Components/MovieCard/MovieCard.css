@@ -95,4 +95,14 @@
     .movie-details .overview{
         font-size: 12.5px;
     }
+    .movie-details .title{
+        font-size: 14px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    .rating{
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
 }
