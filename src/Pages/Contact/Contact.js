@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import I from '../../Components/Images/Yo.jpg'
 
 
 export const Contact = () => {
@@ -28,7 +29,7 @@ export const Contact = () => {
                 <div className='container-card-contact'>
                 <a href='https://www.linkedin.com/in/joaquin-galdeano-174281209/'>
                     <div className='card-contact'>
-                        <img className='img-contact' />
+                        <img className='img-contact' src={I}  />
                         <b className='b-contact'>Joaquin Galdeano</b>
                     </div>
                 </a>
