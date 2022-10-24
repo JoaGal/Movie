@@ -24,7 +24,7 @@ export const Movies = () => {
     <div className="container">
       <form onSubmit={searchMovies}>
         <div className='box-search'>
-          <button type={'submit'} className={search ? 'button-search' : 'button-search2'} onClick={() => setSearch(!search)}>
+          <button type={'submit'} className={search ? 'button-search' : 'button-search2'} onClick={() => setSearch(true)}>
             <HiSearch className='icon-search' />
           </button>
           <input className={search ? 'search' : 'search2'} name='search' type='text' ref={searchMovie}/>
