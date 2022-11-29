@@ -20,28 +20,8 @@ export const Login = () => {
         e.preventDefault();
     }
 
-    const selectQueen = () => {
-        window.localStorage.setItem('User', 'Queen');
-        SelectUser()
-    }
-
-    const selectRook = () => {
-        window.localStorage.setItem('User', 'Rook');
-        SelectUser()
-    }
-
-    const selectKnight = () => {
-        window.localStorage.setItem('User', 'Knight');
-        SelectUser()
-    }
-
-    const selectKing = () => {
-        window.localStorage.setItem('User', 'King');
-        SelectUser()
-    }
-
-    const selectPawn = () => {
-        window.localStorage.setItem('User', 'Pawn');
+    const selectIcon = (name) => {
+        window.localStorage.setItem('User', name);
         SelectUser()
     }
 
@@ -73,11 +53,11 @@ export const Login = () => {
                     </i>
                 </div>
                 <div>
-                    <GiChessQueen className='user-ico2' onClick={selectQueen} />
-                    <GiChessRook className='user-ico2' onClick={selectRook} />
-                    <GiChessKnight className='user-ico2' onClick={selectKnight} />
-                    <GiChessKing className='user-ico2' onClick={selectKing} />
-                    <GiChessPawn className='user-ico2' onClick={selectPawn} />
+                    <GiChessQueen className='user-ico2' onClick={()=> selectIcon('Queen')} />
+                    <GiChessRook className='user-ico2' onClick={()=> selectIcon('Rook')} />
+                    <GiChessKnight className='user-ico2' onClick={()=> selectIcon('Knight')} />
+                    <GiChessKing className='user-ico2' onClick={()=> selectIcon('King')} />
+                    <GiChessPawn className='user-ico2' onClick={()=> selectIcon('Pawn')} />
                 </div>
                 <p className={subscribe ? 'p-access' : 'p-error'}>{error}</p>
                 <p className='login-p'>Email</p>
